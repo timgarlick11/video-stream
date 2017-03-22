@@ -20,7 +20,6 @@ function videoError(e) {
 	alert('video stream not available at this time')
 }
 
-var mediaStream;
 
 $('.stop').click(function() {
 
@@ -33,6 +32,7 @@ $('.stop').click(function() {
 
 
 $(function ($) {
+	console.log(navigator.platform);
 
 	results_enable = $('button.results');
 	var start = true;
