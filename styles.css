@@ -1,21 +1,13 @@
-#video-container {
-	display: none;
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
-}
-#videoElement {
-    width: 500px;
-    height: 375px;
-    background-color: #666;
-}
+
 html, body {font-size: 16px; font-family: 'Roboto', sans-serif; text-transform: uppercase; text-align: center;}
+#login {display: flex; justify-content: center; flex-direction: column;}
+#main-content {display: none;}
+
 .highlight {box-shadow: 0 10px 6px -6px #777;}
 .white {background: #ffffff !important; background: #004F8C !important;}
 .clear {clear: both;}
 .header-title { display: block; max-width: 50em; width: 80%; margin: 1em auto 0 auto; text-align: center; box-sizing: border-box;}
-.form-container, .chart-container {background-color:rgba(240,240,240,.8); padding: 2rem; display: inline-block; max-width:50em; width: 80%; margin: 2em auto; text-align: center; box-sizing: border-box; }
+.form-container, .chart-container {background-color:rgba(240,240,240,.8); padding: 5rem; display: inline-block; max-width:50em; width: 80%; margin: 2em auto; text-align: center; box-sizing: border-box; }
 .chart-container {background-color: rgba(255,255,255,.8)}
 .pagination-container {width: 100%; margin: 0 auto;}
 .pagination-container {display: flex; justify-content: space-around; padding: 0; list-style-type: none; }
@@ -47,9 +39,11 @@ label span {display: block;}
 .roi-container {display: flex; align-items: flex-start; margin-bottom: .75em; justify-content: space-around;}
 .roi-container label {display: inline-block; width: 50%; text-align: left; line-height: 1.1em;}
 .roi-input, .roi-final {display: inline-block; font-size: 1.1em; border-radius: 4px; border: none; padding: .25em; box-sizing: border-box;}
+.roi-currency {background: url("/images/black-us-currency.png") center left no-repeat #fff; padding-left: 15px;}
+.roi-hrs {background: url("/images/clock.png") 95% center no-repeat #fff; padding-left: 15px; }
 /*.input-container:before, .input-container::before {content:"$"; margin-right: 2px;}*/
 .input-seperator .input-title {display: block; text-align: center;}
-.input-seperator {margin: 1.5em auto; display: none; box-sizing: border-box; text-align: center; }
+.input-seperator {margin: 1.5em auto; box-sizing: border-box; text-align: center; }
 .input-title {margin: 2em 0; } 
 .other { width: 18.5em; border-radius: .5em; border: none; font-size: .75em; padding: 1em; box-sizing: border-box; display: none; text-align: center;}
 input.customer {font-size: 1.2em; padding: .7em; display: inline-block; margin: 0 auto 1em auto !important; width: 75%; border-radius: .4em; border: none; box-sizing: border-box !important;}
@@ -71,6 +65,8 @@ input.customer {font-size: 1.2em; padding: .7em; display: inline-block; margin: 
 .schedule .schedule-link:hover {background:#F27F2F; color: #ffffff; transition: all 0.3s ease; border-radius: .5em; box-shadow:0 8px 10px 1px rgba(0,0,0,0.14),0 4px 14px 2px rgba(0,0,0,0.12),0 5px 3px -3px rgba(0,0,0,0.35); box-sizing: border-box; }
 .chart-container {display: none;}
 .chart-info {margin-bottom: 2em;}
+.video-buttons {display: flex; width: 100%; justify-content: space-between;}
+.video-buttons button {margin: 10px 0; width: 150px;}
 /*Modals*/
 
 .modalDialog { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,0.8); z-index: 99999; opacity:0; -webkit-transition: opacity 400ms ease-in; -moz-transition: opacity 400ms ease-in; transition: opacity 400ms ease-in; pointer-events: none;}
@@ -78,8 +74,10 @@ input.customer {font-size: 1.2em; padding: .7em; display: inline-block; margin: 
 .modalDialog > div { max-width: 400px; position: relative; margin: 15% auto; padding: 1rem 1.5rem; border-radius: 5px; background: #fff;}
 .close { background: #dddddd; color: #FFFFFF; line-height: 1.5rem; position: absolute; right: -12px; text-align: center; top: -10px; height: 1.5rem; width: 1.5rem; text-decoration: none; border-radius:100%; box-shadow: 1px 1px 3px #000;}
 .close:hover { background: #F27F2F; text-decoration: none; color: #ffffff; cursor: pointer;}
+input.login {width: 50%;}
 
 @media screen and (max-width: 768px) {
+	input .login {width: 70%;}
 	.form-container { width: 85%;}
 	.pagination-container button {font-size: .9em;}
 	.software-container {width: 90%; padding: 1em;}
@@ -87,10 +85,26 @@ input.customer {font-size: 1.2em; padding: .7em; display: inline-block; margin: 
 	form #captcha {font-size: 1em;}
 }
 @media screen and (max-width: 400px) {
+	input .login {width: 90%;}
 	.input-title {font-size: 1.2em}
 	.form-container { padding: 1.5em .8em; width: 90%;}
 	.pagination-container button { font-size: .75em;}
 	.schedule {width: 90%; margin: 1em auto;}
 	form #captcha {font-size: .7em;}
 	
+}
+
+
+
+#video-container {
+	display: none;
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
 }

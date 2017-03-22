@@ -4,6 +4,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 var mediaStream;
 $('.start').click(function() {
+	$('.stop').prop('disabled', false).css('opacity', '1');
 	if (navigator.getUserMedia) {       
 		navigator.getUserMedia({video: true}, handleVideo, videoError);
 
@@ -159,6 +160,52 @@ $(function ($) {
 
 		
 	});
+
+	var inputValueCounter = function(inputField) {
+		var button = ".login";
+		var inputFieldParents = inputField.parents('#login')
+		var currentContainer = inputFieldParents.children('.login');
+		var currentContainerButton = inputFieldParents.children('.loginButton');
+		var counter = 0;
+
+		$.each(currentContainer, function(i,el) {
+			var inputs = el.value;
+			console.log(inputs);
+			if(inputs) {
+				counter = counter + 1;
+				if(counter === currentContainer.length) {
+					currentContainerButton.prop('disabled', false).css('opacity', '1');
+				}
+			}
+			else {
+				counter = counter - 1; 
+				if(counter < currentContainer.length) {
+					currentContainerButton.prop('disabled', true).css('opacity', '.5');
+				}
+			}
+
+
+
+		});
+	}
+
+	$('.login').keyup(function() {
+		inputValueCounter($(this))
+	});
+
+	$('.loginButton').click(function() {
+
+		$('#login').fadeOut(300);
+		$('#main-content').fadeIn(400);
+
+	});
+	$('#campaign').click(function() {
+
+		var campaign = $('input[name="campaign"').val();
+		$("#main-content").fadeOut(500);
+		$("#video-container").fadeIn(700);
+	})
+	var collectingData = parseInt($('input[name="collecting-data"').val());
 
 	
 });

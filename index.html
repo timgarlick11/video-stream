@@ -10,171 +10,54 @@
 </head>
 <body>
 
+	
+
 	<div class="form-container">
+		<div  id="login">
+			<h1>Kid Creative</h1>	
+			<input class="hs-input customer login" type="text" name="username" required placeholder="Username">
+			<input class="hs-input customer login" type="password" name="password" value="" required placeholder="Password">
 
-		<div class="pagination-container">
-
-			<button class="start" data-filter="0"><span>1</span></button>
-
-			<button data-filter="1"><span>2</span></button>
-
-			<button data-filter="2"><span>3</span></button>
-
-			<button data-filter="3"><span>4</span></button>
-
-			<button data-filter="4"><span>5</span></button>
-
-			<button data-filter="5"><span>6</span></button>
-
+			<button class="showNext loginButton">Login</button>
+			<!-- <input type="submit" value="Submit" class="hs-button primary large" data-reactid=".hbspt-forms-0.2.1.0"> -->
 		</div>
-		<!-- 	/dev/software-generator/thank-you/ -->
-		<form action="/dev/software-recommender/thank-you/" enctype="multipart/form-data" method="POST" class="hs-form stacked" >
-			<div class="input-seperator" id="industry" data-number="0">
-				<label class="input-title" for="">Which of the following best describe your Industry? <br> <span>(Select all that apply)</span> </label>
-				<label>
-					<input class="hs-input industry" type="checkbox" name="industry_type[]" value="asset-tracking" data-recommendation="fishbowl_warehouse">
-					<div class="checkbox-alternate">Asset Tracking</div>
-				</label>
-				<label >
-					<input class="hs-input industry" type="checkbox" name="industry_type[]" value="manufacturing" data-recommendation="fishbowl_manufacturing">
-					<div class="checkbox-alternate">Manufacturing</div>
-				</label>
-				<label>
-					<input class="hs-input industry" type="checkbox" name="industry_type[]" value="retail" data-recommendation="fishbowl_warehouse">
-					<div class="checkbox-alternate">Retail</div>
-				</label> 
-				<label>
-					<input class="hs-input industry" type="checkbox" name="industry_type[]" value="service" data-recommendation="fishbowl_warehouse">
-					<div class="checkbox-alternate">Service</div>
-				</label> 
-				<label>
-					<input class="hs-input industry" type="checkbox" name="industry_type[]" value="distribution" data-recommendation="fishbowl_manufacturing">
-					<div class="checkbox-alternate">Distribution</div>
-				</label>  
-				<div class="clear"></div>
-				<button type="button" class="showNext">Next</button>
-			</div>
-			<div class="input-seperator" data-number="1">
-				<label class="input-title" for="">What accounting solution do you use? </label>
-				<label>
-					<input class="hs-input accounting-recommendation" type="radio" name="accounting" value="quickbooks-desktop" data-recommendation="quickbooks">
-					<div class="radio-alternate">QuickBooks Desktop</div>
-				</label>
-				<label>
-					<input class="hs-input accounting-recommendation" type="radio" name="accounting" value="quickbooks-online" data-recommendation="quickbooks_online">
-					<div class="radio-alternate">QuickBooks Online</div>
-				</label>
-				<label>
-					<input class="hs-input accounting-recommendation" type="radio" name="accounting" value="xero" data-recommendation="xero">
-					<div class="radio-alternate"><p>Xero</p><br></div>
-				</label>
-				<label>
-					<input class="hs-input accounting-recommendation" type="radio" name="accounting" value="Other" data-recommendation="other">
-					<div class="radio-alternate"><p>Other</p><br></div>
-				</label>
 
-				<input class="hs-input accounting-recommendation other" type="text" name="accounting" value="" data-recommendation="none" placeholder="Other Accounting Solution">
+		<form id="main-content"  >
+			<div class="input-seperator" data-number="0">
+				<label class="input-title" for="">Please Select a campaign </label>
+				<label>
+					<input class="hs-input accounting-recommendation" type="radio" name="campaign" value="Toys R' Us" data-recommendation="quickbooks">
+					<div class="radio-alternate">Toys R' Us</div>
+				</label>
+				<label>
+					<input class="hs-input accounting-recommendation" type="radio" name="campaign" value="BuyBuyBaby" >
+					<div class="radio-alternate">BuyBuyBaby</div>
+				</label>
+				<label>
+					<input class="hs-input accounting-recommendation" type="radio" name="campaign" value="Target">
+					<div class="radio-alternate">Target</div>
+				</label>
+				<label>
+					<input class="hs-input accounting-recommendation" type="radio" name="campaign" value="Walmart" >
+					<div class="radio-alternate">Walmart</div>
+				</label>
 				<div class="clear"></div>
-				<button type="button" class="showPrev">Previous</button>
-				<button type="button" class="showNext">Next</button>
+				<button id="campaign" type="button" class="showNext">Start</button>
 			</div>
-			<div class="input-seperator" id="revenue-recommendation" data-number="2">
-				<label class="input-title" for="">Which of the following apply to your revenue / sales process? <br> <span>(Select all that apply)</span> </label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process[]" value="quotes-jobs" data-recommendation="none">
-					<div class="checkbox-alternate">Quotes - Jobs</div>
-				</label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process[]" value="outside-reps" data-recommendation="none_2">
-					<div class="checkbox-alternate">Outside Reps</div>
-				</label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process[]" value="ecommerce" data-recommendation="fishbowl_commerce">
-					<div class="checkbox-alternate">Ecommerce</div>
-				</label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process[]" value="point-of-sale" data-recommendation="none_3">
-					<div class="checkbox-alternate">Point of Sale</div>
-				</label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process[]" value="delivery" data-recommendation="fishbowl_go">
-					<div class="checkbox-alternate">Delivery</div>
-				</label>
-				<label>
-					<input class="hs-input revenue" type="checkbox" name="sales_process" value="distribution" data-recommendation="none_4">
-					<div class="checkbox-alternate">Distribution</div>
-				</label>
-				<div class="clear"></div>
-				<button type="button" class="showPrev">Previous</button>
-				<button type="button" class="showNext">Next</button>
-			</div>
-			<div class="input-seperator" data-number="3">
-				<label class="input-title">Are you looking to use barcodes with your inventory? </label>
-				<label>
-					<input class="hs-input barcode-recommendation" type="radio" name="scan_barcode" value="yes" data-recommendation="fishbowl_go">
-					<div class="radio-alternate">Yes</div>
-				</label>
-				<label>
-					<input class="hs-input" type="radio" name="scan_barcode" value="no" data-recommendation="none">
-					<div class="radio-alternate">No</div>
-				</label>
-				<label>
-					<input class="hs-input" type="radio" name="scan_barcode" value="potentially" data-recommendation="none_2">
-					<div class="radio-alternate">Maybe</div>
-				</label>
-				<div class="clear"></div>
-				<button type="button" class="showPrev">Previous</button>
-				<button type="button" class="showNext">Next</button>
-			</div>
-			<div class="input-seperator" id="plugin-recommendation" data-number="4">
-				<label class="input-title">Which of the following advanced features apply to your business? <br> <span>(Select all that apply)</span> </label>
-				<label>
-					<input class="hs-input plugin-recommendation" type="checkbox" name="plugins[]" value="shipping" data-recommendation="shipstation">
-					<div class="checkbox-alternate">Shipping</div>
-				</label>
-				<label>
-					<input class="hs-input plugin-recommendation" type="checkbox" name="plugins[]" value="tax-integration" data-recommendation="avalara">
-					<div class="checkbox-alternate">Tax Integration</div>
-				</label>
-				<label>
-					<input class="hs-input plugin-recommendation" type="checkbox" name="plugins[]" value="cloud-access" data-recommendation="fishbowl_anywhere">
-					<div class="checkbox-alternate">Cloud Access</div>
-				</label>
-				<label>
-					<input class="hs-input plugin-recommendation" type="checkbox" name="plugins[]" value="hosting" data-recommendation="fishbowl_hosted_services">
-					<div class="checkbox-alternate">Hosting</div>
-				</label>
-				<label>
-					<input class="hs-input plugin-recommendation" type="checkbox" name="plugins[]" value="time-and-labor" data-recommendation="fishbowl_time_and_labor">
-					<div class="checkbox-alternate">Time and Labor</div>
-				</label>
-				<div class="clear"></div>
-				<button type="button" class="showPrev">Previous</button>
-				<button type="button" class="showNext">Next</button>
-			</div>
-			<div class="input-seperator input-customer" data-number="5">
-				<label class="input-title" for="">Please enter your information</label>				
-				<input class="hs-input customer" type="text" name="firstname" required placeholder="First Name" onfocus="myFunction(this)">
-				<input class="hs-input customer" type="text" name="lastname" value="" required placeholder="Last Name">
-				<input class="hs-input customer" type="email" name="email" placeholder="Email" required value="">
-				<input class="hs-input customer" type="tel" name="phone" placeholder="Phone" value="">
-				<input class="hs-input customer" type="text" name="discount" placeholder="Discount Code" value="">
-				<div class="g-recaptcha" data-sitekey="6LdNnhIUAAAAAFtonCbxlV_3LoR_KWE-_17thOZv" data-callback="captcha_callback"></div>
-				<div class="clear"></div>
 
-				<button type="button" class="showPrev">Previous</button>
-				<button class="results" >Results</button>
-				<!-- <input type="submit" value="Submit" class="hs-button primary large" data-reactid=".hbspt-forms-0.2.1.0"> -->
-			</div>
 
 		</form>
+		<div id="video-container">
+			<video autoplay="true" id="videoElement"></video>
+			<div class="video-buttons">
+				<button class="start">Record</button>
+				<button class="stop highlight">Stop</button>
+
+			</div>
+		</div>
 
 	</div>
-	<div id="video-container">
-		<video autoplay="true" id="videoElement"></video>
-		<button class="start">Start Stream</button>
-		<button class="stop">Stop Stream</button>
-	</div>
+
 
 </body>
 
